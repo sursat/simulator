@@ -8,9 +8,18 @@ GET     /                           controllers.HomeController.index
 GET     /count                      controllers.CountController.count
 # An example controller showing how to write asynchronous code
 GET     /message                    controllers.AsyncController.message
+# Test
+GET     /test                       controllers.HomeController.test
 
+# config APIs
+POST    /simulator/config/add           controllers.ConfigController.addAPI
+
+
+# Please place below routes always at bottom of the routes file
 GET     /:level1                    controllers.HomeController.getLevel1(level1:String)
 GET     /:level1/:level2            controllers.HomeController.getLevel2(level1:String,level2:String)
 GET     /:level1/:level2/:level3    controllers.HomeController.getLevel3(level1:String,level2:String,level3:String)
+GET     /:level1/:level2/:level3/:level4    controllers.HomeController.getLevel4(level1:String,level2:String,level3:String,level4:String)
+
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
