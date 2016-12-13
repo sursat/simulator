@@ -18,8 +18,16 @@ public enum ContentType {
     public static boolean isMember(String type){
         ContentType[] contentTypes = ContentType.values();
         for(ContentType contentType : contentTypes)
-            if(contentType.type == type)
+            if(contentType.type.equals(type))
                 return true;
         return false;
+    }
+
+    public static ContentType of(String type){
+        ContentType[] contentTypes = ContentType.values();
+        for(ContentType contentType : contentTypes)
+            if(contentType.type.equals(type))
+                return contentType;
+        throw new IllegalArgumentException();
     }
 }

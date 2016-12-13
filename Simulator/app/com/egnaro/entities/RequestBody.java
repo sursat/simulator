@@ -5,19 +5,10 @@ package com.egnaro.entities;
  */
 public class RequestBody {
 
-    private boolean isContentApplicable;
     private String contentType;
-
     private boolean isBodyApplicable;
     private String body;
 
-    public boolean isContentApplicable() {
-        return isContentApplicable;
-    }
-
-    public void setContentApplicable(boolean contentApplicable) {
-        isContentApplicable = contentApplicable;
-    }
 
     public String getContentType() {
         return contentType;

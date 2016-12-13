@@ -13,6 +13,9 @@ GET     /test                       controllers.HomeController.test
 
 # config APIs
 POST    /simulator/config/add           controllers.ConfigController.addAPI
+POST    /simulator/config/remove        controllers.ConfigController.removeAPI
+GET     /simulator/apis                 controllers.ConfigController.listAllAPIs
+
 
 
 # Please place below routes always at bottom of the routes file
@@ -20,6 +23,29 @@ GET     /:level1                    controllers.HomeController.getLevel1(level1:
 GET     /:level1/:level2            controllers.HomeController.getLevel2(level1:String,level2:String)
 GET     /:level1/:level2/:level3    controllers.HomeController.getLevel3(level1:String,level2:String,level3:String)
 GET     /:level1/:level2/:level3/:level4    controllers.HomeController.getLevel4(level1:String,level2:String,level3:String,level4:String)
+GET     /:level1/:level2/:level3/:level4/:level5    controllers.HomeController.getLevel5(level1:String,level2:String,level3:String,level4:String,level5:String)
+GET     /:level1/:level2/:level3/:level4/:level5/:level6    controllers.HomeController.getLevel6(level1:String,level2:String,level3:String,level4:String,level5:String,level6:String)
+
+POST     /:level1                    controllers.HomeController.postLevel1(level1:String)
+POST     /:level1/:level2            controllers.HomeController.postLevel2(level1:String,level2:String)
+POST     /:level1/:level2/:level3    controllers.HomeController.postLevel3(level1:String,level2:String,level3:String)
+POST     /:level1/:level2/:level3/:level4    controllers.HomeController.postLevel4(level1:String,level2:String,level3:String,level4:String)
+POST     /:level1/:level2/:level3/:level4/:level5    controllers.HomeController.postLevel5(level1:String,level2:String,level3:String,level4:String,level5:String)
+POST     /:level1/:level2/:level3/:level4/:level5/:level6    controllers.HomeController.postLevel6(level1:String,level2:String,level3:String,level4:String,level5:String,level6:String)
+
+PUT     /:level1                    controllers.HomeController.putLevel1(level1:String)
+PUT     /:level1/:level2            controllers.HomeController.putLevel2(level1:String,level2:String)
+PUT     /:level1/:level2/:level3    controllers.HomeController.putLevel3(level1:String,level2:String,level3:String)
+PUT     /:level1/:level2/:level3/:level4    controllers.HomeController.putLevel4(level1:String,level2:String,level3:String,level4:String)
+PUT     /:level1/:level2/:level3/:level4/:level5    controllers.HomeController.putLevel5(level1:String,level2:String,level3:String,level4:String,level5:String)
+PUT     /:level1/:level2/:level3/:level4/:level5/:level6    controllers.HomeController.putLevel6(level1:String,level2:String,level3:String,level4:String,level5:String,level6:String)
+
+DELETE     /:level1                    controllers.HomeController.deleteLevel1(level1:String)
+DELETE     /:level1/:level2            controllers.HomeController.deleteLevel2(level1:String,level2:String)
+DELETE     /:level1/:level2/:level3    controllers.HomeController.deleteLevel3(level1:String,level2:String,level3:String)
+DELETE     /:level1/:level2/:level3/:level4    controllers.HomeController.deleteLevel4(level1:String,level2:String,level3:String,level4:String)
+DELETE     /:level1/:level2/:level3/:level4/:level5    controllers.HomeController.deleteLevel5(level1:String,level2:String,level3:String,level4:String,level5:String)
+DELETE     /:level1/:level2/:level3/:level4/:level5/:level6    controllers.HomeController.deleteLevel6(level1:String,level2:String,level3:String,level4:String,level5:String,level6:String)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
