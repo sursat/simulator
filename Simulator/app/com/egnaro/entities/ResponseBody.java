@@ -5,6 +5,7 @@ package com.egnaro.entities;
  */
 public class ResponseBody{
     private int statusCode;
+    private boolean isBodyApplicable;
     private String contentType;
     private String body;
 
@@ -14,6 +15,14 @@ public class ResponseBody{
 
     public void setStatusCode(int statusCode) {
         this.statusCode = statusCode;
+    }
+
+    public boolean isBodyApplicable() {
+        return isBodyApplicable;
+    }
+
+    public void setBodyApplicable(boolean bodyApplicable) {
+        isBodyApplicable = bodyApplicable;
     }
 
     public String getContentType() {

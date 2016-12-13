@@ -20,8 +20,13 @@ public class ResultServiceImpl implements ResultService {
         if(!ContentType.isMember(contentType))
             return Results.internalServerError();
         ContentType currentResultContentType = ContentType.of(contentType);
-        if(currentResultContentType.equals(ContentType.TEXT) || currentResultContentType.equals(ContentType.TEXTPLAIN))
-            return Results.status(responseBody.getStatusCode(),responseBody.getBody());
+
+        if(!responseBody.isBodyApplicable())
+            return Results.status(responseBody.getStatusCode());
+
+        if(currentResultContentType.equals(ContentType.TEXT) || currentResultContentType.equals(ContentType.TEXTPLAIN)) {
+            return Results.status(responseBody.getStatusCode(), responseBody.getBody());
+        }
         else if(currentResultContentType.equals(ContentType.JSON)) {
             JsonNode node = Json.parse(responseBody.getBody());
             return Results.status(responseBody.getStatusCode(), node);
