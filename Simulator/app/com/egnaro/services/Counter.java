@@ -1,4 +1,4 @@
-package services;
+package com.egnaro.services;
 
 /**
  * This interface demonstrates how to create a component that is injected

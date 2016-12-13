@@ -1,11 +1,11 @@
-package entities;
+package com.egnaro.entities;
 
 /**
  * Created by egnaro on 12/12/16.
  */
 public enum StatusCode {
 
-    OK(200),ACCEPTED(201),BAD_REQUEST(400),UN_AUTHORIZED(401),INTERNAL_ERROR(500);
+    OK(200),ACCEPTED(201),BAD_REQUEST(400),UN_AUTHORIZED(401),NOT_FOUND(404),INTERNAL_ERROR(500);
 
     private int value;
 

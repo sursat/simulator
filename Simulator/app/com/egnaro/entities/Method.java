@@ -1,4 +1,4 @@
-package entities;
+package com.egnaro.entities;
 
 /**
  * Created by egnaro on 12/12/16.
